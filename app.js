@@ -7,7 +7,7 @@ var express = require("express"),
 function deploy(req, res) {
 
   //Example: refs/heads/develop
-  var branch = req.body.ref.substr(req.body.ref.lastIndexOf("/"));
+  var branch = req.body.ref.substr(req.body.ref.lastIndexOf("/") + 1);
 
   var configurationForBranch = configuration.branch[branch];
 

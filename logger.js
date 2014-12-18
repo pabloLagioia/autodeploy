@@ -8,7 +8,7 @@ function Logger(filePath) {
 Logger.prototype.log = function() {
 
   var now = new Date(),
-      currentTime = a.getFullYear() + "-" + a.getMonth() + "-" + a.getDate() + " " + a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds(),
+      currentTime = now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds(),
       parsedMessage = [currentTime, "=>"].concat(Array.prototype.slice.call(arguments, 0));
 
   console.log.apply(console, parsedMessage);
@@ -16,4 +16,4 @@ Logger.prototype.log = function() {
 
 };
 
-exports.logger = new Logger();
+module.exports = new Logger();

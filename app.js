@@ -2,8 +2,8 @@ var express = require("express"),
     app = express(),
     parseBodyAs = require('body-parser');
     configuration = require("./configuration.json"),
-    logger = require("./logger.js");
-
+    Logger = require("./logger.js"),
+    logger = new Logger();
 
 function deploy(req, res) {
 

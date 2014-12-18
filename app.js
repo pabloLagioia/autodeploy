@@ -55,6 +55,5 @@ var server = app.listen(configuration.port, function () {
   var port = server.address().port;
 
   logger.log('Automated deployment listening on port', port);
-  logger.log('Project path is', configuration.projectPath);
 
 });

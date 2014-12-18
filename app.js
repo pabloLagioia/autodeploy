@@ -12,12 +12,13 @@ function deploy(req, res) {
   var configurationForBranch = configuration.branch[branch];
 
   if ( configurationForBranch ) {
+      logger.log("Received update request");
       var exec = require('child_process').exec;
       exec(configurationForBranch.command, {
         cwd: configurationForBranch.path
       }, function (error, stdout, stderr) {
         if ( error ) {
-          logger.log("Unable to update source code for branch", branch. error.message);
+          logger.log("Unable to update source code for branch", branch);
           logger.log(error);
         } else {
           logger.log("Source code updated for branch", branch);

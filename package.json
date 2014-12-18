@@ -1,0 +1,9 @@
+{
+  "name": "autodeploy",
+  "description": "listens to github hooks and run git pull",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "x"
+  }
+}

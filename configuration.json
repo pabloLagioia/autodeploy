@@ -1,0 +1,13 @@
+{
+  "port": 5000,
+  "branch": {
+    "develop": {
+      "path": "/home/auto/autoserve1-HEAD/Meteor/app/",
+      "execute": "git pull"
+    },
+    "release": {
+      "path": "/home/auto/autoserve-scripts/",
+      "execute": "deploy.sh"
+    }
+  }
+}
